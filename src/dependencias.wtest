@@ -1,0 +1,18 @@
+import dependencias.*
+import rodados.*
+
+describe "dependencias"{
+	//deportes
+	
+	test "test personal"{
+		var deportes = new Dependencia()
+		deportes.personal(45)
+		assert.equals(45,deportes.personal())
+	}
+	//cultura
+	test "test personalC"{
+		var deportes = new Dependencia()
+		deportes.personal(31)
+		assert.equals(31,deportes.personal())
+	}
+}

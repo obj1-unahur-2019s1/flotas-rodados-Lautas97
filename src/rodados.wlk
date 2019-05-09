@@ -31,45 +31,43 @@ class RenaultKwid{
 }
 
 object trafic{
-	var property peso
-	var property cantidad
-	var property velocidadMaxima
+	const property color = "blanco"
 	
-	// 1 = comodo
-	// 2 o cualquiera = popular
-	var property tipoInterior = 1
+	var property motor = comodo
+	var property interior = pulenta
 	
-	// 1 = pulenta
-	// 2 o cualquiera = bataton
-	
-	var property tipoMotor = 1
-	
-	method tipoDeInterior(){
-		if(tipoInterior == 1){
-			peso += 700
-			cantidad += 5
-		}else{
-			peso +=1000
-			cantidad +=12
-		}
-		
-	}
-	method tipoDeMotor(){
-		if(tipoMotor == 1){
-			peso +=1000
-			velocidadMaxima = 130
-		}else{
-			peso+=500
-			velocidadMaxima = 80
-			}
-	}
+	method peso(){return 4000 +interior.peso() + motor.peso()}
+	method cantidad(){return interior.cantidad()}
+	method velocidadMaxima(){return motor.velocidadMaxima()}
 }
-/*object interiorComodo{
+object popular{
+	
+	var property peso = 1000
+	var property cantidad = 12
+	}
+object comodo{
+	var property peso = 700
+	var property cantidad = 5
+	}
+object pulenta{
+	var property peso = 800
+	var property velocidadMaxima = 130
+	}
+	
+object bataton{
+	var property peso = 500
+	var property velocidadMaxima = 80
+	}	
+object autosEspeciales{
+	
+}
+class AutosEspeciales{
 	var property peso
-}	
-	*/
+	var property color
+	var property velocidadMaxima
+	var property cantidad
 	
-	
+}
 	
 	
 	
